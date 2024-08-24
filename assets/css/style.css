@@ -10,7 +10,7 @@ body{
     margin-right: auto;
     margin-left: auto;
     background-color: rgb(216, 219, 231);
-    height: 700px
+    height: 850px;
     
 }
 
@@ -27,4 +27,8 @@ h2, p{
 
 h2{
     color: rgb(19, 73, 106)
+}
+
+.img-display{
+    text-align: center;
 }
