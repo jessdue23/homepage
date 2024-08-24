@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(2, 6, 43);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper{
+    
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(216, 219, 231);
+    height: 700px
+    
+}
+
+h1{
+    background-color: rgb(19, 73, 106);
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+h2, p{
+    padding-left: 20px;
+}
+
+h2{
+    color: rgb(19, 73, 106)
+}
