@@ -11,11 +11,12 @@ body{
     margin-right: auto;
     margin-left: auto;
     background-color: rgb(216, 219, 231);
-    height: 850px;
+    height: auto;
+    padding-bottom: 20px;
     
 }
 
-h1{
+header{
     background-color: rgb(19, 73, 106);
     text-align: center;
     padding: 50px;
