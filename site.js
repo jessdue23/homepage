@@ -27,4 +27,4 @@ else{
 
 
 ////////////ASSIGNMENT 2 - SECRET MESSAGE/////////////////////////
-localStorage.setItem("It's a secret to everybody.", "Google says this is a Zelda reference");
+localStorage.setItem("It's a secret to everybody.", "Google says this is a Zelda reference?");
