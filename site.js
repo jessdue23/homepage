@@ -3,6 +3,10 @@
 const welcomeMessageElement = document.querySelector('#welcome');
 const btnNext = document.querySelector('#next')
 const btnPrev = document.querySelector('#prev')
+const btnAdd = document.querySelector('#add')
+const todoList = document.querySelector(".todo-list")
+const todo = document.querySelector("#new-todo")
+
 
 
 //GET DATE and CONDITIONAL VARIABLE LOGIC
@@ -70,3 +74,55 @@ btnPrev.addEventListener('click', () => {
     currentImage--
     showImages()
 })
+
+////////////////////////TO DO LIST////////////////
+
+
+//Render Arrow Function - Create & Add New List Item to DOM
+const renderToDos = () => {
+    // Clear the li's before we recreate them
+    todoList.innerHTML = ''
+    console.log(todo.value)
+    const li = document.createElement('li')
+    //changed text to value for textcontent from input
+    li.textContent = todo.value
+    todoList.appendChild(li) 
+    // Get the list from local storage
+    const todos = JSON.parse(localStorage.getItem('todo-list')) || []
+
+    // Add a new item to the list
+    todos.push({ text: todo.value, completed: false })
+    // Save the list to local storage
+    localStorage.setItem('todo-list', JSON.stringify(todos))
+
+    console.log(todos)
+
+    //loop thru list of the items
+    todos.forEach(({text}) => {
+        const li = document.createElement('li')
+        li.textContent = todos.text
+        todoList.appendChild(li) 
+    })
+}
+
+
+//ADD ITEM BUTTON//
+btnAdd.addEventListener('click', () => {
+   console.log("Hello")
+   renderToDos()
+
+})
+
+
+
+
+
+
+
+
+// Clear the li's before we recreate them
+todoList.innerHTML = ''
+
+
+
+
