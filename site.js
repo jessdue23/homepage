@@ -98,9 +98,9 @@ const renderToDos = () => {
     console.log(todos)
 
     //loop thru list of the items
-    todos.forEach(({text}) => {
+    todos.forEach((todo) => {
         const li = document.createElement('li')
-        li.textContent = todos.text
+        li.textContent = todo.text
         todoList.appendChild(li) 
     })
 }
