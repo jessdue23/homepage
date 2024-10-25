@@ -9,6 +9,8 @@ const todo = document.querySelector("#new-todo")
 
 
 
+
+
 //GET DATE and CONDITIONAL VARIABLE LOGIC
 const hours = new Date().getHours()
 
@@ -80,13 +82,8 @@ btnPrev.addEventListener('click', () => {
 
 //Render Arrow Function - Create & Add New List Item to DOM
 const renderToDos = () => {
-    // Clear the li's before we recreate them
-    todoList.innerHTML = ''
-    console.log(todo.value)
-    const li = document.createElement('li')
-    //changed text to value for textcontent from input
-    li.textContent = todo.value
-    todoList.appendChild(li) 
+    
+
     // Get the list from local storage
     const todos = JSON.parse(localStorage.getItem('todo-list')) || []
 
@@ -98,30 +95,34 @@ const renderToDos = () => {
     console.log(todos)
 
     //loop thru list of the items
-    todos.forEach((todo) => {
-        const li = document.createElement('li')
-        li.textContent = todo.text
-        todoList.appendChild(li) 
-    })
+    
+        todos.forEach((todo) => {
+            const li = document.createElement('li')
+            li.textContent = todo.text
+            todoList.appendChild(li) 
+        })
+    
+
 }
+
+
 
 
 //ADD ITEM BUTTON//
 btnAdd.addEventListener('click', () => {
    console.log("Hello")
+   todoList.innerHTML = ''
+   console.log(todo.value)
+   //const li = document.createElement('li')
+   //changed text to value for textcontent from input
+   //li.textContent = todo.value
+   //todoList.appendChild(li) 
+
    renderToDos()
 
 })
 
 
-
-
-
-
-
-
-// Clear the li's before we recreate them
-todoList.innerHTML = ''
 
 
 
