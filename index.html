@@ -68,7 +68,45 @@
                     <button id="add" type="button">Add To Do</button>
                 </div>
 
+
+                <div class="pokemon">
+
+                </div>
             </section>
         </div>
     </body>
+    <!-- <script>
+        
+
+ 
+    const getRandomPokemon = async() => {
+        //async process
+        
+            const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150)
+
+        
+                const response = await fetch(url)
+                const data = await response.json()
+                
+                
+                console.log(data)
+                console.log(data.sprites.front_default)
+
+                //return object
+                return data
+    }
+
+ 
+
+    //await first call to fetch and pass thru object to second function   
+    const renderPokemon = (pokemon) => {
+    console.log(pokemon)
+    console.log(pokemon.sprites.front_default)
+    }
+
+   
+ result = getRandomPokemon()
+ renderPokemon(result)
+
+    </script> -->
 </html>

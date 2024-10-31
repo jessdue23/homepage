@@ -6,6 +6,7 @@ const btnPrev = document.querySelector('#prev')
 const btnAdd = document.querySelector('#add')
 const todoList = document.querySelector(".todo-list")
 const todo = document.querySelector("#new-todo")
+const parentEl = document.querySelector(".pokemon")
 
 
 
@@ -109,18 +110,57 @@ const renderToDos = () => {
 
 
 //ADD ITEM BUTTON//
-btnAdd.addEventListener('click', () => {
-   console.log("Hello")
-   todoList.innerHTML = ''
-   console.log(todo.value)
-   //const li = document.createElement('li')
-   //changed text to value for textcontent from input
-   //li.textContent = todo.value
-   //todoList.appendChild(li) 
+// btnAdd.addEventListener('click', () => {
+//    console.log("Hello")
+//    todoList.innerHTML = ''
+//    console.log(todo.value)
+//    //const li = document.createElement('li')
+//    //changed text to value for textcontent from input
+//    //li.textContent = todo.value
+//    //todoList.appendChild(li) 
 
-   renderToDos()
+//    renderToDos()
 
-})
+// })
+
+////////////////////Pokemon///////////////
+
+
+//IIFE to call on page load
+(async() => {
+
+    //Async function
+    const getRandomPokemon = async () => {
+        //get data
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150))
+        const json = await response.json()
+        //console.log(json)
+
+        //deconstruct
+        const {id, name,  sprites} = json
+        return {id, name, sprites}
+    
+    }
+
+    const pokemon = await getRandomPokemon()
+    //console.log(pokemon)
+    //console.log(pokemon.sprites.front_default)
+
+    //Render function after await
+    const renderPokemon = (pokemon) => {
+        //console.log(pokemon)
+        const img = document.createElement('img')
+        img.src = pokemon.sprites.front_default
+        img.alt = pokemon.name
+        parentEl.append(img)
+    }
+    
+    renderPokemon(pokemon)
+
+})()
+
+
+
 
 
 
