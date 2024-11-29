@@ -106,23 +106,20 @@ const renderToDos = () => {
 
 }
 
-
-
-
 // ADD ITEM BUTTON//
-// btnAdd.addEventListener('click', () => {
-//    console.log("Hello")
-//    todoList.innerHTML = ''
-//    console.log(todo.value)
-//    //const li = document.createElement('li')
-//    //changed text to value for textcontent from input
-//    //li.textContent = todo.value
-//    //todoList.appendChild(li) 
+btnAdd.addEventListener('click', () => {
+   console.log("Hello")
+   todoList.innerHTML = ''
+   console.log(todo.value)
+   //const li = document.createElement('li')
+   //changed text to value for textcontent from input
+   //li.textContent = todo.value
+   //todoList.appendChild(li) 
 
-//    renderToDos()
-// })
+   renderToDos()
+})
 
-// renderToDos()
+renderToDos()
 
 ////////////////////Pokemon///////////////
 
